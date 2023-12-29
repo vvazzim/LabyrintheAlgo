@@ -3,10 +3,10 @@ package Labyrinthe;
 public class Etat {
     int x;
     int y;
-    int temps; // Ajout de la variable temps
-    int cout;  // Ajout de la variable cout
+    int temps;
     Direction direction;
     Etat pere;
+    int cout;
 
     public Etat(int x, int y, int temps, Direction direction) {
         this.x = x;
@@ -14,16 +14,11 @@ public class Etat {
         this.temps = temps;
         this.direction = direction;
         this.pere = null;
-        this.cout = 0; // Initialisez la variable cout
-    }
-
-    public Direction getDirection() {
-        return direction;
+        this.cout = 0;
     }
 
     @Override
     public String toString() {
         return String.format("(%d,%d,%d)", x, y, temps);
     }
-
 }
